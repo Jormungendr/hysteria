@@ -1,0 +1,45 @@
+[workspace]
+members = [
+    "hysteria_core",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["Hysteria Team"]
+license = "MIT"
+repository = "https://github.com/apernet/hysteria"
+homepage = "https://hysteria.network"
+description = "Hysteria 2 - A feature-packed proxy & relay tool optimized for lossy, unstable connections"
+
+[workspace.dependencies]
+# QUIC library
+s2n-quic = "1.0"
+
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.9"
+
+# Cryptography
+blake2 = "0.10"
+rand = "0.9"
+
+# Error handling
+thiserror = "2"
+anyhow = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+# Network utilities
+byteorder = "1.4"
+bytes = "1.0"
+
+# Testing
+tokio-test = "0.4"
