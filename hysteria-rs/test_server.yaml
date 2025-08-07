@@ -1,0 +1,19 @@
+listen: 127.0.0.1:18445
+cert: /tmp/hysteria_test_cert.pem
+key: /tmp/hysteria_test_key.pem
+auth:
+  type: password
+  password: your_password_here
+  userpass: null
+  http: null
+bandwidth:
+  up: 1 Gbps
+  down: 1 Gbps
+masquerade:
+  type: proxy
+  file: null
+  proxy:
+    url: https://example.com
+    rewrite_host: true
+obfs: null
+quic: null

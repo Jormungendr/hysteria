@@ -1,6 +1,8 @@
 [workspace]
 members = [
     "hysteria_core",
+    "hysteria_cli",
+    "hysteria_extras",
 ]
 resolver = "2"
 
@@ -15,7 +17,7 @@ description = "Hysteria 2 - A feature-packed proxy & relay tool optimized for lo
 
 [workspace.dependencies]
 # QUIC library
-s2n-quic = "1.0"
+quinn = "0.11"
 
 # Async runtime
 tokio = { version = "1.0", features = ["full"] }
@@ -43,3 +45,15 @@ bytes = "1.0"
 
 # Testing
 tokio-test = "0.4"
+
+# CLI framework
+clap = { version = "4.0", features = ["derive", "env"] }
+
+# ACME for automatic certificate management
+rustls-acme = "0.10"
+rustls = { version = "0.23", features = ["ring"] }
+rustls-pemfile = "2.0"
+tokio-rustls = "0.26"
+
+# Configuration
+toml = "0.8"

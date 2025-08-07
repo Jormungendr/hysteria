@@ -1,0 +1,50 @@
+[package]
+name = "hysteria_cli"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+description = "Hysteria 2 CLI - Command line client and server"
+
+[[bin]]
+name = "hysteria"
+path = "src/main.rs"
+
+[dependencies]
+# Local dependencies
+hysteria_core = { path = "../hysteria_core" }
+hysteria_extras = { path = "../hysteria_extras" }
+
+# CLI framework
+clap = { version = "4.0", features = ["derive", "env"] }
+
+# TLS
+rustls = { workspace = true }
+
+# Async runtime
+tokio.workspace = true
+
+# Serialization
+serde.workspace = true
+serde_json.workspace = true
+serde_yaml.workspace = true
+
+# Error handling
+thiserror.workspace = true
+anyhow.workspace = true
+
+# Logging
+tracing.workspace = true
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
+
+# Network utilities
+bytes.workspace = true
+
+# Configuration
+toml = "0.8"
+
+[dev-dependencies]
+tokio-test.workspace = true
+tempfile = "3.0"

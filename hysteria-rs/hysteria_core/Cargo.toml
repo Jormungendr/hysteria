@@ -10,7 +10,7 @@ description = "Core protocol implementation for Hysteria 2"
 
 [dependencies]
 # QUIC library
-s2n-quic = { workspace = true }
+quinn = { workspace = true }
 
 # Async runtime
 tokio = { workspace = true }
@@ -34,6 +34,12 @@ tracing-subscriber = { workspace = true }
 # Network utilities
 byteorder = { workspace = true }
 bytes = { workspace = true }
+
+# ACME for automatic certificate management
+rustls-acme = { workspace = true }
+rustls = { workspace = true, features = ["ring"] }
+rustls-pemfile = { workspace = true }
+tokio-rustls = { workspace = true }
 
 [dev-dependencies]
 tokio-test = { workspace = true }

@@ -1,0 +1,40 @@
+[package]
+name = "hysteria_extras"
+version.workspace = true
+authors.workspace = true
+license.workspace = true
+edition.workspace = true
+description = "Extra features for Hysteria 2 - authentication, obfuscation, ACL, and more"
+repository.workspace = true
+homepage.workspace = true
+keywords = ["proxy", "network", "quic", "hysteria", "extras"]
+categories = ["network-programming", "authentication", "cryptography"]
+
+[lib]
+name = "hysteria_extras"
+path = "src/lib.rs"
+
+[dependencies]
+hysteria_core = { path = "../hysteria_core" }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true, version = "2" }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+bytes = { workspace = true }
+async-trait = "0.1"
+blake2 = "0.10"
+rand = "0.9"
+regex = "1.0"
+reqwest = { version = "0.12", features = ["json", "rustls-tls"], default-features = false }
+base64 = "0.22"
+sha2 = "0.10"
+hmac = "0.12"
+cidr = "0.3"
+once_cell = "1.0"
+lru = "0.16"
+
+[dev-dependencies]
+tempfile = "3.0"
+tokio-test = "0.4"

@@ -1,0 +1,21 @@
+server:
+  addr: 127.0.0.1
+  port: 18445
+  sni: localhost
+  insecure: true
+auth:
+  type: password
+  password: your_password_here
+  userpass: null
+  http: null
+bandwidth:
+  up: 100 Mbps
+  down: 100 Mbps
+socks5:
+  listen: 127.0.0.1:11080
+  disable_udp: false
+http:
+  listen: 127.0.0.1:8080
+tun: null
+obfs: null
+quic: null

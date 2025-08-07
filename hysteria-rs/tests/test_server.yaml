@@ -1,0 +1,20 @@
+listen: "0.0.0.0:8443"
+cert: "server.crt"
+key: "server.key"
+
+auth:
+  type: "password"
+  password: "test123"
+
+bandwidth:
+  up: "100 mbps"
+  down: "100 mbps"
+
+quic:
+  initStreamReceiveWindow: 8388608
+  maxStreamReceiveWindow: 8388608
+  initConnReceiveWindow: 20971520
+  maxConnReceiveWindow: 20971520
+  maxIdleTimeout: "30s"
+  maxIncomingStreams: 1024
+  disablePathMTUDiscovery: false

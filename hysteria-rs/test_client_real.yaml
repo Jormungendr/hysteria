@@ -1,0 +1,20 @@
+server:
+  addr: acs-r.fenrisu1fr.uno
+  port: 443
+  sni: acs-r.fenrisu1fr.uno
+  insecure: false
+
+auth:
+  type: password
+  password: ifeeellikeamotherlesschild1!
+
+tls:
+  sni: acs-r.fenrisu1fr.uno
+  insecure: false
+
+socks5:
+  listen: 127.0.0.1:1080
+
+bandwidth:
+  up: 100mbps
+  down: 100mbps

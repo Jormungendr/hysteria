@@ -1,0 +1,31 @@
+listen: "0.0.0.0:8443"
+auth:
+  type: "password"
+  password: "your_password_here"
+bandwidth:
+  up: "1 Gbps"
+  down: "1 Gbps"
+acme:
+  domains:
+    - "example.com"
+    - "www.example.com"
+  email: "admin@example.com"
+  staging: true
+  cache_dir: "./acme_cache"
+masquerade:
+  type: "proxy"
+  proxy:
+    url: "https://www.bing.com"
+    rewrite_host: true
+obfs:
+  type: "salamander"
+  salamander:
+    password: "cry_me_a_r1ver"
+quic:
+  initial_stream_receive_window: 8388608
+  max_stream_receive_window: 8388608
+  initial_connection_receive_window: 20971520
+  max_connection_receive_window: 20971520
+  max_idle_timeout: "30s"
+  max_incoming_streams: 1024
+  disable_active_migration: false

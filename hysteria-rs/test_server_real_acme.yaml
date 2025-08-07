@@ -1,0 +1,19 @@
+listen: 0.0.0.0:443
+
+acme:
+  domains:
+    - acs-r.fenrisu1fr.uno
+  email: zitong.tian@outlook.com
+  staging: false
+  cache_dir: ./acme_cache
+  challenge_type: tls_alpn01
+
+auth:
+  type: password
+  password: ifeeellikeamotherlesschild1!
+
+masquerade:
+  type: proxy
+  proxy:
+    url: https://news.ycombinator.com/
+    rewriteHost: true
